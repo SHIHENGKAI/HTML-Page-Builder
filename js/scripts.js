@@ -12,15 +12,19 @@ function readHTMLFile(url){
     return toReturn;
 };
 
-	/**
-	 * This dpesnt really work, so will revisit
-	 */
-function removeBlock () {
+/**
+ * This dpesnt really work, so will revisit
+ */
+function blockAdded () {
 	$('#removeme').each(function() {
 		$(this).on('click', function() {
 	        $(this).closest('.block').remove();
 	    });
     });
+
+    $('*[contenteditable="true"]').summernote({
+	  airMode: true
+	});
 };
 /*-----------------------------------------------------------------------------------*/
 /*	DOCUMENT READY JS
@@ -57,7 +61,7 @@ jQuery(document).ready(function(){
 			});	
 		});
 
-		removeBlock();
+		blockAdded();
 		
 		return false;
 		
