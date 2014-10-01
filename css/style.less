@@ -81,7 +81,7 @@
 }
 #builder.menu-closed #close-menu {
 	position: fixed;
-	top: 20px;
+	bottom: 20px;
 	left: 25px;
 	z-index: 11;
 	font-size: 0;
@@ -90,6 +90,14 @@
 	content: "\f105";
 	font-family: "FontAwesome";
 	font-size: 24px;
+}
+
+.navbar-fixed-top {
+	margin-left: 300px;
+}
+
+body.menu-closed .navbar-fixed-top {
+	margin-left: 0;
 }
 /*-----------------------------------------------------------------------------------*/
 /*	CONTENT STYLES
@@ -128,6 +136,13 @@
 		left: 70px;
 		background: #eee;
 	}	
+	.remove-block {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		color: #fff;
+		z-index: 15;
+	}
 	.ui-state-highlight {
 		background: black;
 	}

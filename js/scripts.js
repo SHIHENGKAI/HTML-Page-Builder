@@ -11,6 +11,12 @@ function readHTMLFile(url){
     });
     return toReturn;
 };
+
+function removeBlock () {
+ 	 $('#removeme').on('click', function() {
+        $(this).closest('.block').remove();
+    });
+};
 /*-----------------------------------------------------------------------------------*/
 /*	DOCUMENT READY JS
 /*-----------------------------------------------------------------------------------*/
@@ -38,13 +44,15 @@ jQuery(document).ready(function(){
 		var $this = $(this),
 			echo = readHTMLFile( $this.attr('href') );
 		
-		$( $this.attr('data-destination') ).append(echo);
+		$( $this.attr('data-destination') ).append(echo);		
 		
 		$('.sortable').each(function(){
 			$(this).sortable({
 				handle: ".sub-handle"
 			});	
 		});
+
+		removeBlock();
 		
 		return false;
 		
@@ -78,11 +86,7 @@ jQuery(document).ready(function(){
 	 * Menu hide
 	 */
     $('#close-menu').on('click', function(e) {
-      $('#content, #builder').toggleClass("menu-closed");
-      e.preventDefault();
+      	$('#content, #builder, body').toggleClass("menu-closed");
+      	e.preventDefault();
     });
 });
-
-jQuery(document).ready(function(){
-
-});		
