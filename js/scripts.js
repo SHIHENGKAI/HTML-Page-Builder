@@ -85,17 +85,8 @@ jQuery(document).ready(function(){
 	/**
 	 * Menu hide
 	 */
-<<<<<<< HEAD
-    $('#close-menu').on('click', function(e) {
-      	$('#content, #builder, body').toggleClass("menu-closed");
-      	e.preventDefault();
-    });
-});
-=======
-    $('#close-menu').click(function(){
+	$('#close-menu').click(function(){
     	$('#content, #builder').toggleClass("menu-closed");
     	return false;
     });
-    
-});	
->>>>>>> origin/Development
+});
