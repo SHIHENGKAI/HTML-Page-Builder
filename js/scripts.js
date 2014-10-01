@@ -1,3 +1,6 @@
+/*-----------------------------------------------------------------------------------*/
+/*	CUSTOM FUNCTIONS
+/*-----------------------------------------------------------------------------------*/
 function readHTMLFile(url){
     var toReturn;
     $.ajax({
@@ -8,7 +11,9 @@ function readHTMLFile(url){
     });
     return toReturn;
 };
-
+/*-----------------------------------------------------------------------------------*/
+/*	DOCUMENT READY JS
+/*-----------------------------------------------------------------------------------*/
 jQuery(document).ready(function(){
 	 
 	/**
@@ -19,7 +24,7 @@ jQuery(document).ready(function(){
 	$('.element-fetcher').click(function(){
 		
 		var $this = $(this),
-			echo = readHTMLFile( $(this).attr('href') );
+			echo = readHTMLFile( $this.attr('href') );
 			
 		$( $this.attr('data-destination') ).append(echo);
 		
