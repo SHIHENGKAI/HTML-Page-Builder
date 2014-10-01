@@ -63,3 +63,26 @@ jQuery(document).ready(function(){
 	});
 
 });
+
+/*-----------------------------------------------------------------------------------*/
+/*	DANS CRUDE JS - HOLD ON TIGHT
+/*-----------------------------------------------------------------------------------*/
+ $(function () {
+
+	/**
+	 * Stylish menu
+	 */
+    $('#menu').metisMenu();
+
+	/**
+	 * Menu hide
+	 */
+    $('#close-menu').on('click', function(e) {
+      $('#content, #builder').toggleClass("menu-closed");
+      e.preventDefault();
+    });
+});
+
+jQuery(document).ready(function(){
+
+});		

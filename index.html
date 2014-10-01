@@ -19,6 +19,9 @@
 	
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	
 	<!-- LESS CSS -->
 	<link rel="stylesheet/less" type="text/css" href="css/style.less" />
@@ -27,7 +30,7 @@
 
 <body>
 
-	<header id="builder">
+	<header id="builder" class="sidebar-nav">
 		
 		<!-- 
 			in here you'll see how we're adding the links to the content generators.
@@ -35,31 +38,41 @@
 		-->
 		<section class="logo">
 			<img src="http://placehold.it/250x80px" alt="logo" />
-		</section>
-		
-		<section class="header-blocks">
-			<h4>Header Elements</h4>
-			<a href="blocks/navbar-block.html" class="element-fetcher" data-destination="#header-content">Navbar Block</a>
-		</section>
-		
-		<section class="body-blocks">
-			<h4>Body Elements</h4>
-			<a href="blocks/jumbotron-block.html" class="element-fetcher" data-destination="#page-content">Jumbotron Block</a>
-			<a href="blocks/text-block.html" class="element-fetcher" data-destination="#page-content">Text Block</a>
-			<a href="blocks/list-block.html" class="element-fetcher" data-destination="#page-content">List Block</a>
-		</section>
-		
-		<section class="footer-blocks">
-			<h4>Footer Elements</h4>
-			<a href="blocks/text-block.html" class="element-fetcher" data-destination="#footer-content">Text Block</a>
-		</section>
+		</section> 
+
+		<ul id="menu">
+          	<li class="">
+              	<a href="#"><h4>Header Elements</h4></a>
+              	<ul class="collapse" style="height: 0px;">
+                  	<li><a href="blocks/navbar-block.html" class="element-fetcher" data-destination="#header-content">Navbar Block</a></li>
+              	</ul>
+          	</li>
+          	<li class="">
+              	<a href="#"><h4>Body Elements</h4></a>
+              	<ul class="collapse" style="height: 0px;">
+					<li><a href="blocks/jumbotron-block.html" class="element-fetcher" data-destination="#page-content">Jumbotron Block</a></li>
+					<li><a href="blocks/text-block.html" class="element-fetcher" data-destination="#page-content">Text Block</a></li>
+					<li><a href="blocks/list-block.html" class="element-fetcher" data-destination="#page-content">List Block</a></li>
+					<li><a href="blocks/post-carousel.html" class="element-fetcher" data-destination="#page-content">Blog Carousel</a></li>
+					<li><a href="blocks/full-width-slider.html" class="element-fetcher" data-destination="#page-content">Full Width Slider</a></li>
+              	</ul>
+          	</li>
+          	<li class="">
+              	<a href="#"><h4>Footer Elements</h4></a>
+              	<ul class="collapse" style="height: 0px;">
+                  	<li><a href="blocks/text-block.html" class="element-fetcher" data-destination="#footer-content">Text Block</a></li>
+              	</ul>
+          	</li>
+      </ul>
 		
 		<a href="#" id="output-button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Output HTML</a>
+
+		<a href="#" id="close-menu" class="btn btn-danger">Close Menu</a>
 		
 	</header>
 	
 <!-- this is where all the content gets put, indented wierdly just so that is goes into the pre element more cleanly -->
-	<section id="content">
+	<section id="content" class="">
 <header id="header-content"></header>
 <section id="page-content"></section>
 <footer id="footer-content"></footer>	
@@ -95,6 +108,7 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- Main Custom JS for this template -->
+<script src="//cdn.jsdelivr.net/bootstrap.metismenu/1.1.0/js/metismenu.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/scripts.js"></script>
 </body>

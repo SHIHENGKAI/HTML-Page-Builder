@@ -3,6 +3,7 @@
  */
  body, html {
 	overflow-x: hidden;
+	height: 100%;
 }
 /*-----------------------------------------------------------------------------------*/
 /*	BUILDER STYLES
@@ -10,18 +11,96 @@
  #builder {
 	width: 300px;
 	float: left;
-	background: #e5e5e5;
+	background: #333;
 	min-height: 800px;
+	height: 100%;
 	padding: 25px;
+	position: fixed;
+	margin-left: 0px;
+	webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	.logo {
+		margin-bottom: 25px;
+	}
 	.element-fetcher {
 		display: block;	
 	}
+	ul {
+		padding: 0;
+		margin: 0 0 25px;
+		list-style: none;
+	}
+	ul li,
+	ul a {
+		display: block;
+	}
+	ul a {
+		padding: 10px 0px;
+		color: #aaa;
+		border-top: 1px solid rgba(0, 0, 0, 0.3);
+		box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
+		text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+	}
+	ul a:hover,
+	:focus,
+	:active {
+		color: #fff;
+		text-decoration: none;
+	}
+	ul ul a {
+		padding: 10px 30px;
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+	ul ul a:hover,
+	ul ul a:focus,
+	ul ul a:active {
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+	.sidebar-nav-item {
+		padding-left: 5px;
+	}
+	.sidebar-nav-item-icon {
+		padding-right: 5px;
+	}
+}
+#builder.menu-closed {
+	margin-left: -300px;
+	webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+ #content.menu-closed {
+	margin-left: 0px;	
+	webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+#builder.menu-closed #close-menu {
+	position: fixed;
+	top: 20px;
+	left: 25px;
+	z-index: 11;
+	font-size: 0;
+}
+#builder.menu-closed #close-menu:after {
+	content: "\f105";
+	font-family: "FontAwesome";
+	font-size: 24px;
 }
 /*-----------------------------------------------------------------------------------*/
 /*	CONTENT STYLES
 /*-----------------------------------------------------------------------------------*/
  #content {
 	overflow: hidden;
+	margin-left: 300px;
+	webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
 	.block {
 		position: relative;	
 		overflow: hidden;
@@ -36,7 +115,19 @@
 		background: #fff;	
 		cursor: move;
 		border: 1px solid #333;
+		z-index: 50;
 	}
+	.block-settings {
+		position: absolute;
+		top: 10px;
+		width: 50px;
+		height: 50px;
+		cursor: move;
+		border: 1px solid #333;
+		z-index: 50;
+		left: 70px;
+		background: #eee;
+	}	
 	.ui-state-highlight {
 		background: black;
 	}
