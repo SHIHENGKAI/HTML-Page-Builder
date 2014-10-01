@@ -12,9 +12,14 @@ function readHTMLFile(url){
     return toReturn;
 };
 
+	/**
+	 * This dpesnt really work, so will revisit
+	 */
 function removeBlock () {
- 	 $('#removeme').on('click', function() {
-        $(this).closest('.block').remove();
+	$('#removeme').each(function() {
+		$(this).on('click', function() {
+	        $(this).closest('.block').remove();
+	    });
     });
 };
 /*-----------------------------------------------------------------------------------*/
