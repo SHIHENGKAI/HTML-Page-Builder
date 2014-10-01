@@ -3,6 +3,7 @@
  */
  body, html {
 	overflow-x: hidden;
+	height: 100%;
 }
 /*-----------------------------------------------------------------------------------*/
 /*	BUILDER STYLES
@@ -12,7 +13,9 @@
 	float: left;
 	background: #e5e5e5;
 	min-height: 800px;
+	height: 100%;
 	padding: 25px;
+	position: fixed;
 	.element-fetcher {
 		display: block;	
 	}
@@ -22,6 +25,7 @@
 /*-----------------------------------------------------------------------------------*/
  #content {
 	overflow: hidden;
+	margin-left: 300px;
 	.block {
 		position: relative;	
 		overflow: hidden;
@@ -36,6 +40,7 @@
 		background: #fff;	
 		cursor: move;
 		border: 1px solid #333;
+		z-index: 50;
 	}
 	.ui-state-highlight {
 		background: black;
