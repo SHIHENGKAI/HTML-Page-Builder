@@ -23,7 +23,7 @@ jQuery(document).ready(function(){
 	 * @toDo: We could do with the same thing available for sections with multiple blocks inside them, like a text section with 3 columns of text
 	 */
 	$('#page-content').sortable({ 
-		handle: ".handle" ,
+		handle: ".handle",
 		placeholder: "ui-state-highlight",
 		forcePlaceholderSize: true
 	});
@@ -37,8 +37,14 @@ jQuery(document).ready(function(){
 		
 		var $this = $(this),
 			echo = readHTMLFile( $this.attr('href') );
-			
+		
 		$( $this.attr('data-destination') ).append(echo);
+		
+		$('.sortable').each(function(){
+			$(this).sortable({
+				handle: ".sub-handle"
+			});	
+		});
 		
 		return false;
 		
