@@ -23,7 +23,7 @@ jQuery(document).ready(function(){
 	 * @toDo: We could do with the same thing available for sections with multiple blocks inside them, like a text section with 3 columns of text
 	 */
 	$('#page-content').sortable({ 
-		handle: ".handle",
+		handle: ".handle, not(.handle.block-settings)",
 		placeholder: "ui-state-highlight",
 		forcePlaceholderSize: true
 	});
