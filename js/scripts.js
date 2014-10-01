@@ -67,8 +67,8 @@ jQuery(document).ready(function(){
 /*-----------------------------------------------------------------------------------*/
 /*	DANS CRUDE JS - HOLD ON TIGHT
 /*-----------------------------------------------------------------------------------*/
- $(function () {
-
+jQuery(document).ready(function(){
+	
 	/**
 	 * Stylish menu
 	 */
@@ -77,12 +77,9 @@ jQuery(document).ready(function(){
 	/**
 	 * Menu hide
 	 */
-    $('#close-menu').on('click', function(e) {
-      $('#content, #builder').toggleClass("menu-closed");
-      e.preventDefault();
+    $('#close-menu').click(function(){
+    	$('#content, #builder').toggleClass("menu-closed");
+    	return false;
     });
-});
-
-jQuery(document).ready(function(){
-
-});		
+    
+});	
