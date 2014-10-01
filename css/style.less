@@ -16,6 +16,11 @@
 	height: 100%;
 	padding: 25px;
 	position: fixed;
+	margin-left: 0px;
+	webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
 	.logo {
 		margin-bottom: 25px;
 	}
@@ -60,13 +65,42 @@
 		padding-right: 5px;
 	}
 }
-
+#builder.menu-closed {
+	margin-left: -300px;
+	webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+ #content.menu-closed {
+	margin-left: 0px;	
+	webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+#builder.menu-closed #close-menu {
+	position: fixed;
+	top: 20px;
+	left: 25px;
+	z-index: 11;
+	font-size: 0;
+}
+#builder.menu-closed #close-menu:after {
+	content: "\f105";
+	font-family: "FontAwesome";
+	font-size: 24px;
+}
 /*-----------------------------------------------------------------------------------*/
 /*	CONTENT STYLES
 /*-----------------------------------------------------------------------------------*/
  #content {
 	overflow: hidden;
 	margin-left: 300px;
+	webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
 	.block {
 		position: relative;	
 		overflow: hidden;
