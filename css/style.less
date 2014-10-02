@@ -8,6 +8,18 @@
 .modal-backdrop.in {
 	opacity: 0.85;
 }
+#header-content {
+	background: #fff;
+	padding: 20px 20px 0;
+}
+#page-content {
+	background: #fff;
+	padding: 0 20px;
+}
+#footer-content {
+	background: #fff;
+	padding: 0 20px 20px;
+}
 /*-----------------------------------------------------------------------------------*/
 /*	BUILDER STYLES
 /*-----------------------------------------------------------------------------------*/
@@ -140,9 +152,10 @@
 	-moz-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
+	padding: 0 0 0 80px;
+	background: #bbb;
 	.block {
 		position: relative;	
-		overflow: hidden;
 	}
 	.handle,
 	.sub-handle {
@@ -153,30 +166,32 @@
 		height: 50px;
 		background: #fff;	
 		cursor: move;
-		border: 1px solid #333;
 		z-index: 50;
 		text-align: center;
 		line-height: 50px;
+		border-radius: 3px;
+	}
+	.handle {
+		left: -85px;
 	}
 	.block-settings {
 		position: absolute;
-		top: 10px;
+		top: 80px;
 		width: 50px;
 		height: 50px;
-		border: 1px solid #333;
 		z-index: 50;
-		left: 70px;
-		background: #eee;
+		left: -85px;
+		color: #fff;
 		text-align: center;
-		line-height: 50px;
+		line-height: 38px;
 	}	
 	.removeme {
 		position: absolute;
-		top: 10px;
+		top: 150px;
 		width: 50px;
 		height: 50px;
 		z-index: 50;
-		right: 10px;
+		left: -85px;
 		text-align: center;
 		line-height: 50px;
 		padding: 0;
