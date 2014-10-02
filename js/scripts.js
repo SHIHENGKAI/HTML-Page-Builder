@@ -13,19 +13,19 @@ function readHTMLFile(url){
 };
 
 /**
- * This dpesnt really work, so will revisit
+ * This doesnt really work, so will revisit
  */
 function blockAdded () {
-	$('#removeme').each(function() {
-		$(this).on('click', function() {
-	        $(this).closest('.block').remove();
-	    });
-    });
+	$(document).on('click', '#removeme', function() {
+	    $(this).closest('.block').remove();
+	});
 
     $('*[contenteditable="true"]').summernote({
 	  airMode: true
 	});
 };
+
+
 /*-----------------------------------------------------------------------------------*/
 /*	DOCUMENT READY JS
 /*-----------------------------------------------------------------------------------*/
