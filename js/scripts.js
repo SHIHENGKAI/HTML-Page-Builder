@@ -11,6 +11,23 @@ function readHTMLFile(url){
     });
     return toReturn;
 };
+
+/**
+ * This doesnt really work, so will revisit
+ */
+function blockAdded () {
+	$(document).on('click', '#removeme', function() {
+	    $(this).closest('.block').fadeOut(300, function() {
+	        $(this).remove();
+	    });
+	});
+
+    $('*[contenteditable="true"]').summernote({
+	  airMode: true
+	});
+};
+
+
 /*-----------------------------------------------------------------------------------*/
 /*	DOCUMENT READY JS
 /*-----------------------------------------------------------------------------------*/
@@ -38,13 +55,15 @@ jQuery(document).ready(function(){
 		var $this = $(this),
 			echo = readHTMLFile( $this.attr('href') );
 		
-		$( $this.attr('data-destination') ).append(echo);
+		$( $this.attr('data-destination') ).append(echo);		
 		
 		$('.sortable').each(function(){
 			$(this).sortable({
 				handle: ".sub-handle"
 			});	
 		});
+
+		blockAdded();
 		
 		return false;
 		
@@ -77,9 +96,8 @@ jQuery(document).ready(function(){
 	/**
 	 * Menu hide
 	 */
-    $('#close-menu').click(function(){
+	$('#close-menu').click(function(){
     	$('#content, #builder').toggleClass("menu-closed");
     	return false;
     });
-    
-});	
+});

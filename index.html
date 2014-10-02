@@ -43,30 +43,35 @@
 		<ul id="menu">
           	<li class="">
               	<a href="#"><h4>Header Elements</h4></a>
-              	<ul class="collapse" style="height: 0px;">
+              	<ul class="collapse">
                   	<li><a href="blocks/navbar-block.html" class="element-fetcher" data-destination="#header-content">Navbar Block</a></li>
+                  	<li><a href="blocks/fixed-navbar-block.html" class="element-fetcher" data-destination="#header-content">Fixed Navbar Block</a></li>
               	</ul>
           	</li>
           	<li class="">
               	<a href="#"><h4>Body Elements</h4></a>
-              	<ul class="collapse" style="height: 0px;">
+              	<ul class="collapse">
+              		<li><a href="blocks/full-width-slider.html" class="element-fetcher" data-destination="#page-content">Full Width Slider</a></li>
 					<li><a href="blocks/jumbotron-block.html" class="element-fetcher" data-destination="#page-content">Jumbotron Block</a></li>
 					<li><a href="blocks/text-block.html" class="element-fetcher" data-destination="#page-content">Text Block</a></li>
 					<li><a href="blocks/list-block.html" class="element-fetcher" data-destination="#page-content">List Block</a></li>
 					<li><a href="blocks/post-carousel.html" class="element-fetcher" data-destination="#page-content">Blog Carousel</a></li>
-					<li><a href="blocks/full-width-slider.html" class="element-fetcher" data-destination="#page-content">Full Width Slider</a></li>
+					<li><a href="blocks/testimonial-carousel.html" class="element-fetcher" data-destination="#page-content">Testimonial Carousel</a></li>
+					<li><a href="blocks/single-post.html" class="element-fetcher" data-destination="#page-content">Single Post</a></li>
+					<li><a href="blocks/contact-form.html" class="element-fetcher" data-destination="#page-content">Contact Form</a></li>
+					<li><a href="blocks/pricing-table.html" class="element-fetcher" data-destination="#page-content">Pricing Table</a></li>
               	</ul>
           	</li>
           	<li class="">
               	<a href="#"><h4>Footer Elements</h4></a>
-              	<ul class="collapse" style="height: 0px;">
+              	<ul class="collapse">
                   	<li><a href="blocks/text-block.html" class="element-fetcher" data-destination="#footer-content">Text Block</a></li>
               	</ul>
           	</li>
       </ul>
 		
 		<section class="buttons">
-			<a href="#" id="output-button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Output HTML</a>
+			<a href="#" id="output-button" class="btn btn-primary" data-toggle="modal" data-target="#output-modal">Output HTML</a>
 			<a href="#" id="close-menu" class="btn btn-danger">Close Menu</a>
 		</section>
 		
@@ -81,7 +86,7 @@
 <!-- end content -->
 	
 <!-- This is the output modal, it's just standard bootstrap -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="output-modal" tabindex="-1" role="dialog" aria-labelledby="output-modalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 		
@@ -95,7 +100,8 @@
 			</div>
 			
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				<button id="select-all" type="button" class="btn btn-success ">Select All</button>
 				<button type="button" class="btn btn-primary">Save changes</button>
 			</div>
 			
@@ -108,6 +114,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
+
+<!-- include summernote css/js-->
+<link href="css/summernote.css" />
+<script src="js/summernote.min.js"></script>
+
 <!-- Main Custom JS for this template -->
 <script src="js/plugins.js"></script>
 <script src="js/scripts.js"></script>
