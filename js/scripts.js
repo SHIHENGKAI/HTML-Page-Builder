@@ -16,14 +16,8 @@ function readHTMLFile(url){
  * This doesnt really work, so will revisit
  */
 function blockAdded () {
-	$(document).on('click', '#removeme', function() {
-	    $(this).closest('.block').fadeOut(300, function() {
-	        $(this).remove();
-	    });
-	});
-
     $('*[contenteditable="true"]').summernote({
-	  airMode: true
+		airMode: true
 	});
 };
 
@@ -79,6 +73,15 @@ jQuery(document).ready(function(){
 		content = content.replace(/<section class="block"><div class="handle"><\/div>/gi, '');
 		content = content.replace(/<!--end block--><\/section>/gi, '');
 		$('#output-code').text(content);
+	});
+	
+	/**
+	 * If you call the 'on' method on any element on body, then this is watched even when added / removed by AJAX :)
+	 */
+	$('body').on('click', '.removeme', function() {
+	    $(this).parents('.block').fadeOut(300, function() {
+	        $(this).remove();
+	    });
 	});
 
 });
