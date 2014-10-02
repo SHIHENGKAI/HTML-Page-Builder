@@ -17,7 +17,9 @@ function readHTMLFile(url){
  */
 function blockAdded () {
 	$(document).on('click', '#removeme', function() {
-	    $(this).closest('.block').remove();
+	    $(this).closest('.block').fadeOut(300, function() {
+	        $(this).remove();
+	    });
 	});
 
     $('*[contenteditable="true"]').summernote({
